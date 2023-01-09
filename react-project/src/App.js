@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import './App.css';
-import Box from "./component/Box"
 function App() {
+  const [counter,setCounter] = useState(0);
   return (
     <div>
-        <Box/>   
-        <Box/>
+        <div>
+          counter:{counter}
+        </div>
+       <button onClick={() => setCounter(counter+1) }>
+          클릭!!
+       </button>
     </div>
 
       //하나로 묶어서 반환.
