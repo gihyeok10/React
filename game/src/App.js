@@ -25,7 +25,6 @@ function App() {
   const [userSelect,setUserSelect] = useState(null);
   const [computerSelect,setComputerSelect] = useState(null);
   const [result,setResult] = useState(null)
-  const [result2,setResult2] = useState(null)
 
 
   const play = (userChoice)=> {
