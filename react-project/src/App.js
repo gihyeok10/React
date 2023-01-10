@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './App.css';
+
 function App() {
   const [counter,setCounter] = useState(0);
+  useEffect(()=>{
+    console.log("useEffect one")
+  },[])
+
+  useEffect(()=>{
+    console.log("useEffect two")
+  },[counter])
   return (
     <div>
+       {console.log("useEffect")}
         <div>
           counter:{counter}
         </div>
