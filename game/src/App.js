@@ -35,9 +35,19 @@ function App() {
     setComputerSelect(computerChoice)
 
     setResult(judgement(choice[userChoice],computerChoice))
-    setResult2(judgement2(choice[userChoice],computerChoice))
+    // const computerJugement = () => {
+    //   if (result == "Draw"){
+    //     return 'Draw'
+    //   }
+    //   else if (result == "WIN"){
+    //     return 'LOSE'
+    //   }
+    //   else if (result == "LOSE"){
+    //     return 'WIN'
+    //   }
+    // }
+    // setResult2(computerJugement());
 
-    
   }
 
   const judgement = (user,computer) => {
@@ -52,18 +62,6 @@ function App() {
 
   }
 
-  const judgement2 = (user,computer) => {
-    //유저값 == 컴퓨터 => 비김
-   
-    if(user.name == computer.name) {
-     return "Draw"
-    }else if (computer.name == "Rock") return user.name == "Scissors" ? 'WIN' : "LOSE"
-     else if (computer.name == "Scissors") return user.name == "paper" ? 'WIN' : "LOSE"
-     else if (computer.name == "Paper") return user.name == "Rock" ? "WIN":"LOSE"
- 
- 
-   }
-
   const randomChoice = () => {
     let itemArray = Object.keys(choice); //객체에 키값만 뽑아서 어레이로 만들어주는 함수!
     let randomItem = Math.floor(Math.random()* itemArray.length);
@@ -75,7 +73,7 @@ function App() {
     <div>
     <div className='main-div'>
       <Box user="YOU" result={result} item={userSelect}></Box>
-      <Box user="Computer" result={result2} item={computerSelect}></Box>
+      <Box user="Computer" result={result} item={computerSelect}></Box>
     </div>
     <div className="main-div">
         <button onClick={() => play("scissors")}>가위</button>

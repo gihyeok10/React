@@ -1,13 +1,33 @@
-.box{
+.box {
+  display: flex;
+  margin: 10px;
+  width: 800px;
+  height: 800px;
   border: 1px solid black;
-  width: 500px;
-
+  background-color: white;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20pt;
 }
-.item-img{
+
+.item-img {
   width: 400px;
 }
-.main-div{
+
+.main-div {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+.WIN {
+  border: 10px solid green;
+  color: green;
+}
+.LOSE {
+  border: 10px solid red;
+  color: red;
+}
+.Draw {
+  border: 10px solid black;
+  color: black;
 }

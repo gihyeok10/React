@@ -1,14 +1,28 @@
-import React from 'react'
-//선택하기 전 null 값을 사용하려면 가드를 사용해라 {props.item && props.item.img}
-function Box(props) {
-  console.log(props);
-  return (
-    <div className="box">
-        <h1>{props.user}</h1>
-        <img className="item-img" src={props.item && props.item.img}/>
-        <h2>{props.result}</h2> 
-    </div>
-  )
-}
+import React from "react"; 
+//처음에 널값 할려면 가드 {props.item && props.item.name}
+const Box = (props) => {
+  let result;
+  if (
+    props.user === "Computer" &&
+    props.result !== "Draw" &&
+    props.result !== ""
+  ) { // 카드가 computer카드인가? && 결과가 비긴건 아닌가? && props.result에 값이 있는가?
+    result = props.result === "WIN" ? "LOSE" : "WIN";
+  } else {// 위의 경우가 아니라면 props 로 전달된 결과를 그대로 쓴다.
+    result = props.result;
+  }
+  if (props.user === "Computer") {
+    console.log("computer", result);
+  }
 
-export default Box
+  return (
+    <div className={`box ${result}`}>
+      <h1>{props.user}</h1>
+      <h2 data-testid="item-name">{props.item && props.item.name}</h2>
+      <img className="item-img" src={props.item && props.item.img} />
+      <h2>{result}</h2>
+    </div>
+  );
+};
+
+export default Box;
