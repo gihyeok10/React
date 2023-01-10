@@ -1,5 +1,5 @@
 import React from 'react'
-
+//선택하기 전 null 값을 사용하려면 가드를 사용해라 {props.item && props.item.img}
 function Box(props) {
   console.log(props);
   return (
