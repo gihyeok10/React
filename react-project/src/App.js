@@ -3,13 +3,14 @@ import './App.css';
 
 function App() {
   const [counter,setCounter] = useState(0);
+  const [value,setValue] = useState(0);
   useEffect(()=>{
     console.log("useEffect one")
   },[])
 
   useEffect(()=>{
-    console.log("useEffect two")
-  },[counter])
+    console.log("useEffect two",)
+  },[counter])  //값이 하나라도 바뀌면 한번 실행댐.
   return (
     <div>
        {console.log("useEffect")}
