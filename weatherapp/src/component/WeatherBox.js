@@ -1,11 +1,13 @@
 import React from 'react'
-
-const WeatherBox = () => {
+//props안쓰고 이렇게 해도댐..!
+const WeatherBox = ({ weather }) => {
+  console.log("weather?:",weather);
+  //3항 연산  weather ? .name 가능.
   return (
     <div className='weather-box'>
-        <div>서울</div>
-        <h2>30도/ 230화씨</h2>
-        <h3>맑은 하늘</h3>
+        <div>{weather?.name}</div>  
+        <h2>{weather?.main.temp}C/{((weather?.main.temp)*1.8+32).toFixed(2)}F</h2>
+        <h3>{weather?.weather[0].description}</h3>
     </div>
   )
 }

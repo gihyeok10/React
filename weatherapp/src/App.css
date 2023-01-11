@@ -1,5 +1,5 @@
 body{
-  background: url(https://cdn.crowdpic.net/detail-thumb/thumb_d_62D25CDF145C55841F869B978520FFDD.jpeg);
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20210908/pngtree-weather-blue-sky-daytime-white-clouds-clear-sky-image_817896.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,19 +14,24 @@ body{
 }
 
 .weather-box{
-  border: 3px solid white;
-  padding: 50px;
+  color: #ffc107;
+  padding: 100px;
   border-radius: 30px;
-  background-color: beige;
+  background-color: black;
+}
+
+.weather-box div{
+
+  font-size: 50px;
+
 }
 .weather-button{
   
   margin-top: 1em;
-  border: 3px solid white;
-  border-radius: 30px;
-  background-color: beige;
+  border-radius: 45px;
+  background-color: black;
 }
 
 .weather-button button{
-  margin: 10px;
+  margin: 1em;
 }
