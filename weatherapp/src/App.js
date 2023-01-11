@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react';
 import WeatherBox from './component/WeatherBox';
 import WeatherButton from './component/WeatherButton';
 import ClipLoader from "react-spinners/ClipLoader";
+import { Container } from 'react-bootstrap';
 
 //apikey:a0394a63659b1eeb0bd0ad3d0aa64f86
 
@@ -67,7 +68,7 @@ function App() {
 
   
   return (
-    <div>
+    <Container className='vh-100'>
     {loading ? <div className='container'>
     <ClipLoader
         color= "#f88c6b"
@@ -77,10 +78,11 @@ function App() {
         data-testid="loader"
       /> </div>: <div className='container'>
       <WeatherBox weather={weather} ></WeatherBox>
-      <WeatherButton cities={cities} setCity={setCity} handleCityChange={handleCityChange}></WeatherButton>
+      <WeatherButton cities={cities} setCity={setCity} handleCityChange={handleCityChange}></WeatherButton> 
       </div>}
-    </div>
+    </Container>
   );
 }
 
+//props로 함수도 보낼수있다.
 export default App;
