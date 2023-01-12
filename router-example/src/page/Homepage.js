@@ -1,10 +1,17 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 const Homepage = () => {
+  const navigate =  useNavigate() //쿼리 문 작성
+  const goProductPage = () =>{
+    
+    navigate('/products?q=pants')
+    
+  };
   return (
     <div>
         <h1>Homepage</h1>
         <Link to="/about">Go to about Page</Link>
+        <button onClick={goProductPage}>Go to productsPage</button>
     </div>
   )
 }
