@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-end;
   margin: 30px;
+  cursor: pointer;
 }
 
 .nav-section{
@@ -35,4 +36,14 @@
 .search-box input{
   border: none;
   margin-left: 5px;
+}
+
+.img-box{
+  height: 364px;
+  width: 264px;
+}
+
+.product-img{
+  display: flex;
+  justify-content: flex-end;
 }
