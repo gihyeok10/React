@@ -8,7 +8,7 @@ const ProductAll = () => {
   const getProducts = async() => {
     let searchQuery = query.get('q') || "";  //자동으로 검색해줌
     console.log("search queey:", searchQuery)
-    let url = `http://localhost:5000/products?q=${searchQuery}` //자동으로 검색해줌
+    let url = `https://my-json-server.typicode.com/gihyeok10/React/products?q=${searchQuery}` //자동으로 검색해줌
     let response = await fetch(url)
     let data =await response.json()
     console.log(data)
