@@ -6,7 +6,8 @@ const ProductDetail = () => {
   let {id} = useParams();
   const [product,setProduct] = useState(null)
   const getProductDetail = async () => {
-    let url = `https://my-json-server.typicode.com/gihyeok10/React/products/${id}`
+    // let url = `https://my-json-server.typicode.com/gihyeok10/React/products/${id}` 배포주소
+    let url = `http://localhost:5000/products?q=${id}`
     let response = await fetch(url)
     let data = await response.json();
     console.log(data)
