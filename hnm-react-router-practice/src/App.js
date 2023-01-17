@@ -7,9 +7,12 @@ import Navbar from './component/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
+import { useSelector } from 'react-redux';
+
 function App() {
 
-  const [authenticate,setAuthenticate] = useState(false); 
+  const authenticate = useSelector((state) => state.auth.authenticate)
+
   useEffect(() => {
     console.log('AAAA',authenticate)
   },[authenticate])
@@ -19,7 +22,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<ProductAll/>}></Route>
-        <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}></Route>
+        <Route path='/login' element={<Login setAuthenticate={authenticate}/>}></Route>
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}/>}></Route>
       </Routes>
     </div>
