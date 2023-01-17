@@ -7,7 +7,9 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 const ProductAll = () => {
   // const [productList,setProductList] = useState([]); // 뽑을게 어레이니까 빈 어레이로
-  const productList = useSelector((state) => state.productList)
+  // const productList = useSelector((state) => state.productList)
+  const productList = useSelector((state) => state.product.productList)  //combine으로 합치면 객체 이름 써줘야함~
+
   const [query,setQuery] = useSearchParams();
   const dispatch = useDispatch();
   const getProducts = () => {

@@ -15,4 +15,7 @@ function getProducts(searchQuery) {
 };
 
 
+
+
+
 export const productAction={getProducts }
